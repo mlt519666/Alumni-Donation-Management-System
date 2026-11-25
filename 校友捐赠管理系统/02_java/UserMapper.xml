@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 解析namespace -->
+<mapper namespace="com.xxxx.mapper.UserMapper">
+    <!-- id:对应Dao层接口方法名  parameterType:指定输入参数类型-->
+    <!-- useGeneratedKeys = "true" 将新增的主键赋值到自己定义的keyProperty(id)中-->
+    <select id="queryUserByName" parameterType="String" resultType="com.xxxx.entity.User_">
+        select * from User_ where username = #{username}
+    </select>
+</mapper>
